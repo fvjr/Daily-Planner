@@ -92,50 +92,50 @@ textarea {
 /*my added classes*/
 
 @media screen and (max-width: 992px) {
-  .work-cards {
+  .row .hour .container {
     width: 50%;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .work-cards {
-     width: 100%;
+  .row .hour .container{
+    width: 50%;
   }
-} 
+}
 
 @media screen and (max-width: 992px) {
-  .work-cards-primary {
+  .row .hour .container{
     width: 50%;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .work-cards-primary {
-     width: 100%;
+  .row .hour .container {
+    width: 50%;
   }
-} 
+}
 
 @media screen and (max-width: 992px) {
-  .work-cards h3 {
+  .row .hour{
     width: 50%;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .work-cards h3 {
-     width: 100%;
+  .row .hour .container{
+    width: 50%;
   }
-} 
+}
 
 
 @media screen and (max-width: 992px) {
-  .work-cards-primary h3 {
+  .row .hour .container{
     width: 50%;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .work-cards-primary h3 {
-     width: 100%;
+  .row .hour .container{
+    width: 50%;
   }
-} 
+}
