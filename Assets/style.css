@@ -1,9 +1,7 @@
-
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
-
 }
 
 textarea {
@@ -17,11 +15,19 @@ textarea {
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
+  background-color: gray;
   color: black;
   border-radius: 0;
-  border-bottom: 10px solid black;  
-  background-color: rgb(73, 80, 87);
+  border-bottom: 10px solid black;
+}
+
+.lead {
+  color: white;
+}
+
+#currentDay {
+  font-size: 30px;
+  color: white;
 }
 
 .description {
@@ -31,21 +37,24 @@ textarea {
 .time-block {
   text-align: center;
   border-radius: 15px;
-  padding-top: 30px;
-  padding-bottom: 30px;
 }
 
 .row {
   white-space: pre-wrap;
-  height: 80px;
+  height: 82px;
   border-top: 1px solid white;
+  padding:15px;
 }
 
 .hour {
   background-color: #ffffff;
   color: #000000;
-  border-top: 1px dashed #000000;
+  border: 5px solid #000000;
+  text-align: right;
+  height: 48px;
+  font-size: 35px;
   text-align: center;
+  margin-left: 50px;;
 }
 
 .past {
@@ -69,28 +78,64 @@ textarea {
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
-  transition: 0s 2s;
+  height: 48px;
+  margin: auto;
+  text-align: center;
+  padding: 15px 0;
 }
 
-.saveBtn:hover {
+.saveBtn i:hover {
   font-size: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
-.saveBtn:active {
-  background-color: rgb(118, 168, 118);
-  transition: 0s;
+/*my added classes*/
+
+@media screen and (max-width: 992px) {
+  .work-cards {
+    width: 50%;
+  }
 }
 
-/* my added classes */
-.container {
-  align-items:center;
-  
+@media screen and (max-width: 768px) {
+  .work-cards {
+     width: 100%;
+  }
+} 
 
+@media screen and (max-width: 992px) {
+  .work-cards-primary {
+    width: 50%;
+  }
 }
 
-#timeBlockTime1{
-display: inline-block;  
-width:33%;
-margin: auto;
-font-size: 30px;
+@media screen and (max-width: 768px) {
+  .work-cards-primary {
+     width: 100%;
+  }
+} 
+
+@media screen and (max-width: 992px) {
+  .work-cards h3 {
+    width: 50%;
+  }
 }
+
+@media screen and (max-width: 768px) {
+  .work-cards h3 {
+     width: 100%;
+  }
+} 
+
+
+@media screen and (max-width: 992px) {
+  .work-cards-primary h3 {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .work-cards-primary h3 {
+     width: 100%;
+  }
+} 
