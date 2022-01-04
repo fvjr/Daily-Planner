@@ -22,8 +22,8 @@ Color pallete: https://coolors.co/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-4950
 GIVEN I am using a daily planner to create a schedule
  <!-- 1.) WHEN I open the planner 
 THEN the current day is displayed at the top of the calendar -->
-<!-- 2.) WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours   -->
+ 2.) WHEN I scroll down
+THEN I am presented with timeblocks for standard business hours   
 3.) WHEN I view the timeblocks for that day
 THEN each timeblock is color coded to indicate whether it is in the past, present, or future
 4.) WHEN I click into a timeblock
