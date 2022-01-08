@@ -70,7 +70,7 @@ var hours = [
 hours.forEach(function(hour){
   //set a variable equal to the current time to be used as a parameter for determining color of timeblock 
   //for testing purposes, change value of var MomentHour to a number between 9 and 17 (9am - 5 pm)
-  var momentHour = 9
+  var momentHour = moment().hours()
   //create text inputs
   var textInputDiv = $('<textarea>'); 
   //color code rows depending on if hour block matches current hour, is in the past, or is in the future
@@ -98,7 +98,7 @@ hours.forEach(function(hour){
   //generate save buttons
   var saveBtn = $('<button>');
   saveBtn.text('Click here to save');
-  //place all created elements into a row, rows are then placed into the container element
+  //place all created elements into a row, rows are then placed into the container
   containerEl.append(divRow.append(hourBlock, textInputDiv, saveBtn));
   saveBtn.addClass('saveBtn');
 })
