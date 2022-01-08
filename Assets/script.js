@@ -6,7 +6,6 @@ var hourBlock = $('<div>');
 //text inputs access
 var textInputDiv = $('<div>');
 var textInput = $('<input type="text" placeholder="Enter Planned Activity">');
-
 //hour objects array
 var hours = [
 
@@ -68,9 +67,10 @@ var hours = [
 
 //logic to make timeblock rows 
 hours.forEach(function(hour){
+  var momentHour = moment().hours()
   //set a variable equal to the current time to be used as a parameter for determining color of timeblock 
   //for testing purposes, change value of var MomentHour to a number between 9 and 17 (9am - 5 pm)
-  var momentHour = moment().hours()
+  var momentHour = 9
   //create text inputs
   var textInputDiv = $('<textarea>'); 
   //color code rows depending on if hour block matches current hour, is in the past, or is in the future
@@ -82,6 +82,7 @@ hours.forEach(function(hour){
   } else {
     textInputDiv.addClass('col-8 description future')
   }
+
 //create rows
   divRow = $('<div>');
   divRow.addClass('row');
@@ -92,55 +93,53 @@ hours.forEach(function(hour){
   hourBlock.addClass('col-1 hour');
   //make each hour block show the correct time value
   hourBlock.text(hour.displayHour);
+
  //retrieve entered activity from local storage
   textInputDiv.val(localStorage.getItem(hour.timeValue))
   textInputDiv.addClass('col-8 description');
   //generate save buttons
   var saveBtn = $('<button>');
+  saveBtn.text('Save');
   saveBtn.text('Click here to save');
-  //place all created elements into a row, rows are then placed into the container
+  //place all created elements into a row, rows are then placed into the container element
   containerEl.append(divRow.append(hourBlock, textInputDiv, saveBtn));
   saveBtn.addClass('save');
   saveBtn.addClass('saveBtn');
 })
 
 //save activity to local storage
-$('.save').on('click', function(){
+$('.save').on('click', function () {
   var activity = $(this).siblings('.description').val()
-var hourKey = $(this).parent().attr('id');
-localStorage.setItem(hourKey, activity);
-
-//this = save button
+  var hourKey = $(this).parent().attr('id');
+  localStorage.setItem(hourKey, activity);
+  //this = save button
 })
 
 
-
 function changeColors() {
-
   var momentHour = moment().hours()
   console.log(momentHour)
   $('.row').each(function () {
     var ourHour = parseInt($(this).attr('value'));
     if (ourHour < momentHour) {
-       targetColor = '#d3d3d3';
-       return targetColor
+      targetColor = '#d3d3d3';
+      return targetColor
     } else if (ourHour === momentHour) {
-       targetColor = '#ff6961'
-       return targetColor
+      targetColor = '#ff6961'
+      return targetColor
     } else {
-       targetColor = '#77dd77'
-       return targetColor
+      targetColor = '#77dd77'
+      return targetColor
     }
   }
   )
 }
 
-//function to show current date and time in jumbotron via moment()
+
 function currentDateandTime() {
   var currentDay = moment().format('dddd, MMMM Do')
   $("#currentDay").text(currentDay);
 }
 
 //calls date/time function
-currentDateandTime();
-
+currentDateandTime(); 
