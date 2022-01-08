@@ -70,7 +70,7 @@ hours.forEach(function(hour){
   var momentHour = moment().hours()
   //set a variable equal to the current time to be used as a parameter for determining color of timeblock 
   //for testing purposes, change value of var MomentHour to a number between 9 and 17 (9am - 5 pm)
-  var momentHour = 9
+  // var momentHour = 9
   //create text inputs
   var textInputDiv = $('<textarea>'); 
   //color code rows depending on if hour block matches current hour, is in the past, or is in the future
@@ -103,6 +103,7 @@ hours.forEach(function(hour){
   saveBtn.text('Click here to save');
   //place all created elements into a row, rows are then placed into the container element
   containerEl.append(divRow.append(hourBlock, textInputDiv, saveBtn));
+  //'save' cass adds local storage functionality via click event listener as detailed in function on line 112
   saveBtn.addClass('save');
   saveBtn.addClass('saveBtn');
 })
