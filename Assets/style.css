@@ -69,3 +69,27 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+@media screen and (max-width: 360) {
+  .container {
+    max-width: 25%;
+  }
+ }
+
+@media screen and (max-width: 480) {
+ .container {
+   max-width: 35%;
+ }
+}
+
+@media screen and (max-width: 768) {
+  .container {
+    max-width: 75%;
+  }
+}
+
+@media screen and (min-width: 960) {
+  .container {
+    max-width: 100%;
+  }
+}
